@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #a7f5c6;" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.momuney.controllers.SummaryController">
+   <children>
+      <Label alignment="CENTER" layoutX="243.0" layoutY="60.0" prefHeight="40.0" prefWidth="115.0" text="Summary">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="menuButton" layoutX="15.0" layoutY="460.0" mnemonicParsing="false" onAction="#switchToMenu" text="Menu" />
+      <PieChart fx:id="pieChart" layoutX="75.0" layoutY="180.0" prefHeight="280.0" prefWidth="450.0" title="Spendings by category" />
+      <VBox layoutX="75.0" layoutY="100.0" prefHeight="70.0" prefWidth="450.0" style="-fx-border-color: GRAY; -fx-border-radius: 15;">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Search by">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="searchFilter" prefHeight="29.0" prefWidth="141.0">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+                  <TextField fx:id="keywords" prefWidth="167.0" promptText="Keywords">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="enterButton" mnemonicParsing="false" onAction="#filter" text="Search">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="From">
+                     <HBox.margin>
+                        <Insets left="5.0" right="4.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="dateFrom" onAction="#filter" prefWidth="125.0">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <Button fx:id="clearDateFromFilter" mnemonicParsing="false" onAction="#clearDateFrom" text="Clear">
+                     <HBox.margin>
+                        <Insets right="31.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label text="to">
+                     <HBox.margin>
+                        <Insets right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="dateTo" onAction="#filter" prefWidth="125.0">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></DatePicker>
+                  <Button fx:id="clearDateToFilter" mnemonicParsing="false" onAction="#clearDateTo" text="Clear" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <StackPane fx:id="messagePane" layoutX="175.0" layoutY="-40.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: WHITE; -fx-background-radius: 30;">
+         <children>
+            <Label fx:id="message" text="message">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </StackPane>
+   </children>
+</AnchorPane>

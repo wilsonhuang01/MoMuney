@@ -1,0 +1,52 @@
+.root {
+	-fx-focus-color: SEAGREEN;
+}
+
+.button {
+	-fx-background-color: WHITE;
+	-fx-border-color: LIGHTGRAY;
+	-fx-background-radius: 20;
+	-fx-border-radius: 20;
+}
+
+.choice-box {
+	-fx-background-color: linear-gradient(to bottom, derive(-fx-text-box-border, -10%), -fx-text-box-border),
+    linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);
+    -fx-border-color: LIGHTGRAY;
+    -fx-background-radius: 20;
+	-fx-border-radius: 20;
+}
+
+.date-picker {
+	-fx-background-radius: 20;
+	-fx-border-radius: 20;
+}
+
+.date-picker > .text-field {
+	-fx-background-radius: 20 0 0 20;
+	-fx-border-radius: 20 0 0 20;
+}
+
+.date-picker > .arrow-button {
+	-fx-background-color: WHITE;
+	-fx-border-color: LIGHTGRAY;
+	-fx-background-radius: 0 20 20 0;
+	-fx-border-radius: 0 20 20 0;
+}
+
+.scroll-bar {
+	-fx-background-color: TRANSPARENT;
+}
+
+.scroll-bar > .thumb {
+	-fx-background-color: LIGHTGRAY;
+	-fx-background-radius: 10;
+}
+
+.increment-button, .decrement-button {
+	-fx-background-color: TRANSPARENT;
+}
+
+.text-field {
+	-fx-background-radius: 20;
+}
