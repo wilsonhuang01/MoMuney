@@ -8,5 +8,5 @@ Jackson: https://github.com/FasterXML/jackson
 
 ---
 
-This repository is a copy of [semester project](https://github.com/wiselyc/CS-151) from CS-151 at SJSU in the Fall 2021 semester.  
+This repository is a copy of [semester project](https://github.com/wiselyc/CS-151) from CS-151 - Object-Oriented Design at SJSU in the Fall 2021 semester.  
 Other group members include James Jian, [Sarah Mac](https://github.com/sarahmac2000), and [Wisely Chan](https://github.com/wiselyc).  
